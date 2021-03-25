@@ -1,7 +1,7 @@
 {
   "name": "@kevingimbel/eleventy-plugin-mermaid",
   "version": "1.0.0",
-  "description": "Display accessible ratings using emoji ",
+  "description": "Display graphs using the Mermaid JavaScript library",
   "homepage": "",
   "main": ".eleventy.js",
   "scripts": {
