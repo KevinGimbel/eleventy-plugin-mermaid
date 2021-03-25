@@ -1,0 +1,33 @@
+{
+  "name": "@kevingimbel/eleventy-plugin-mermaid",
+  "version": "1.0.0",
+  "description": "Display accessible ratings using emoji ",
+  "homepage": "",
+  "main": ".eleventy.js",
+  "scripts": {
+    "start": "eleventy --serve --input=dev",
+    "build": "eleventy --input=dev",
+    "bump": "npm --no-git-tag-version version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KevinGimbel/eleventy-plugin-mermaid.git"
+  },
+  "keywords": [
+    "11ty",
+    "11ty-plugin",
+    "eleventy",
+    "eleventy-plugin"
+  ],
+  "author": {
+    "name": "KevinGimbel",
+    "url": "https://kevingimbel.de"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KevinGimbel/eleventy-plugin-mermaid/issues"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1"
+  }
+}
