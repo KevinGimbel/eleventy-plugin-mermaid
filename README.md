@@ -37,7 +37,7 @@ Add the JavaScript code to your page (before the closing `body` tag!)
 </html>
 ```
 
-The `{% mermaid_js %}` code will render the following on all pages where Mermaid graphs are used:
+The `{% mermaid_js %}` code will render the following:
 
 ```html
 <script async src="${src}">mermaid.initialize({ startOnLoad: true });</script>
@@ -52,7 +52,9 @@ Global config options, set in `eleventy.js`.
 
 | Option      | Type | Default       | Description | 
 | ----------- | ---- | ------------- | ----------- | 
-| `mermaid_js_src` | String | `https://unpkg.com/mermaid/dist/mermaid.min.js` | source from where Mermaid will be loaded | 
+| `mermaid_js_src` | String | `https://unpkg.com/mermaid/dist/mermaid.min.js` | source from where Mermaid will be loaded |
+| `html_tag` | String | `pre` | The wrapping HTML tag which the graph is rendered inside |
+| `extra_classes` | String | `""` | Extra CSS classes assigned to the wrapping element |
 
 ### Config Examples
 
@@ -63,6 +65,8 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(pluginMermaid, {
     // load mermaid from local assets directory
     mermaid_js_src: '/assets/mermaid.min.js',
+    html_tag: 'div',
+    extra_classes: 'graph'
   });
 };
 ```
