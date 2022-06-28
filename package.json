@@ -29,5 +29,8 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1"
+  },
+  "dependencies": {
+    "htmlencode": "^0.0.4"
   }
 }
