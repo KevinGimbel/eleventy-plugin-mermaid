@@ -1,3 +1,5 @@
+const htmlencode = require('htmlencode');
+
 module.exports = (eleventyConfig, options) => {
   const highlighter = eleventyConfig.markdownHighlighter;
   const html_tag = options?.html_tag || 'pre';
@@ -10,7 +12,7 @@ module.exports = (eleventyConfig, options) => {
 
   eleventyConfig.addMarkdownHighlighter((str, language) => {
     if (language === "mermaid") {
-      return `<${html_tag} class="mermaid${extra_classes}">${str}</${html_tag}>`;
+      return `<${html_tag} class="mermaid${extra_classes}">${htmlencode.htmlEncode(str)}</${html_tag}>`;
     }
     if (highlighter) {
       return highlighter(str, language)
