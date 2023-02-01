@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plugin Test Page</title>
+</head>
+<body>
+  <h1>Plugin Test Page</h1>
+<p>This page shows the <code>mermaid</code> integration in action!</p>
+<h2>Default options</h2>
+<pre class="mermaid">graph TD&#10;A[Public web] --&gt;|HTTP request| B(Firewall)&#10;B --&gt; C{Is port open}&#10;C --&gt;|Yes| D[Proxy to App]&#10;C --&gt;|No| E[Return error]&#10;</pre>
+<hr>
+<pre class="mermaid">graph TD;&#10;A[Want graphs in 11ty] --&gt;|Search Plugin| B(Found plugin);&#10;B --&gt; C{Use plugin?};&#10;C --&gt;|Yes| D[NICE GRAPHS];&#10;C --&gt;|No| E[NO GRAPHS];&#10;</pre>
+<hr>
+<pre class="mermaid">pie title Pieces of cake&#10;    &quot;Apple&quot; : 120&#10;    &quot;Strawberry&quot; : 60&#10;    &quot;Cheese&quot; : 40&#10;</pre>
+<pre class="mermaid">gantt&#10;    title A Gantt Diagram&#10;    dateFormat  YYYY-MM-DD&#10;    section Section&#10;    A task           :a1, 2014-01-01, 30d&#10;    Another task     :after a1  , 20d&#10;    section Another&#10;    Task in sec      :2014-01-12  , 12d&#10;    another task      : 24d&#10;</pre>
+<h2>Regular code</h2>
+<p>The graph above was rendered with mermaidJS using code like</p>
+<pre class="text">graph TD
+A[Public web] -->|HTTP request| B(Firewall)
+B --> C{Is port open}
+C -->|Yes| D[App]
+C -->|No| E[Return error]
+</a>
+
+  <script async src="https://unpkg.com/mermaid/dist/mermaid.min.js">mermaid.initialize({ startOnLoad: true });</script>
+</body>
+</html>
