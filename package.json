@@ -1,12 +1,12 @@
 {
   "name": "@kevingimbel/eleventy-plugin-mermaid",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Display graphs using the Mermaid JavaScript library",
   "homepage": "",
   "main": ".eleventy.js",
   "scripts": {
-    "start": "eleventy --serve --input=dev",
-    "build": "eleventy --input=dev",
+    "dev": "npx @11ty/eleventy --serve --watch",
+    "build": "npx @11ty/eleventy --input=dev --output=docs",
     "bump": "npm --no-git-tag-version version"
   },
   "repository": {
