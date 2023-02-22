@@ -42,7 +42,7 @@ Add the JavaScript code to your page (before the closing `body` tag!)
 The `{% mermaid_js %}` code will render the following:
 
 ```html
-<script async src="${src}">mermaid.initialize({ startOnLoad: true });</script>
+<script type="module">import mermaid from "${src}";mermaid.initialize({startOnLoad:true});</script>
 ```
 
 `${src}`contains the script source as configured (see below). You can also skip this step and provide Mermaid as part of your JS bundle.
