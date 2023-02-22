@@ -5,7 +5,7 @@
   "homepage": "",
   "main": ".eleventy.js",
   "scripts": {
-    "dev": "npx @11ty/eleventy --serve --watch",
+    "dev": "npx @11ty/eleventy --input=dev --output=docs --serve --watch",
     "build": "npx @11ty/eleventy --input=dev --output=docs",
     "bump": "npm --no-git-tag-version version"
   },
