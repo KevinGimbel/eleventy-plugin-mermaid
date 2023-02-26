@@ -1,3 +1,6 @@
 .github
 .nojekyll
+.vscode
+.eleventyignore
 dev
+docs
