@@ -7,7 +7,7 @@ module.exports = (eleventyConfig, options) => {
 
   eleventyConfig.addShortcode("mermaid_js", () => {
     let src = options?.mermaid_js_src || "https://unpkg.com/mermaid/dist/mermaid.esm.min.mjs";
-    return `<script type="module">import mermaid from "${src}";mermaid.initialize({startOnLoad:true});</script>`
+    return `<script type="module" async>import mermaid from "${src}";document.addEventListener('DOMContentLoaded', mermaid.initialize({startOnLoad:true}));</script>`
   });
 
   eleventyConfig.addMarkdownHighlighter((str, language) => {
