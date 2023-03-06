@@ -10,6 +10,7 @@
 - [Thanks](#thanks)
 - [Future ideas](#future-ideas)
 - [Changelog](#changelog)
+  - [2.1.0](#210)
   - [2.0.0](#200)
 <!-- END mktoc -->
 
@@ -54,7 +55,7 @@ Global config options, set in `eleventy.js`.
 
 | Option      | Type | Default       | Description | 
 | ----------- | ---- | ------------- | ----------- | 
-| `mermaid_js_src` | String | `https://unpkg.com/mermaid/dist/mermaid.esm.min.mjs` | source from where Mermaid will be loaded |
+| `mermaid_js_src` | String | `https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs` | source from where Mermaid will be loaded |
 | `html_tag` | String | `pre` | The wrapping HTML tag which the graph is rendered inside |
 | `extra_classes` | String | `""` | Extra CSS classes assigned to the wrapping element |
 
@@ -96,6 +97,12 @@ The code is mainly taken from [https://cornishweb.com/index.php/2019/05/25/using
 - generate SVG server-side during build
 
 ## Changelog
+
+### 2.1.0
+
+- Add `document.addEventListener('DOMContentLoaded')` around mermaidJS code
+- Add `async` tag to script
+- Pin mermaidJS version to `10` to avoid compatibility issues in the future. This can be overwritten by setting `mermaid_js_src` and only affects users who use `{% mermaid_js %}` shortcode.
 
 ### 2.0.0
 
