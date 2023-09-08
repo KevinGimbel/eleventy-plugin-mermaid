@@ -2,6 +2,7 @@
 > Integrate [Mermaid](https://mermaid-js.github.io/mermaid/#/) with [eleventy](https://11ty.dev/)
 
 <!-- BEGIN mktoc -->
+
 - [Usage](#usage)
 - [Config](#config)
   - [Config Options](#config-options)
@@ -10,6 +11,7 @@
 - [Thanks](#thanks)
 - [Future ideas](#future-ideas)
 - [Changelog](#changelog)
+  - [2.1.1](#211)
   - [2.1.0](#210)
   - [2.0.0](#200)
 <!-- END mktoc -->
@@ -97,6 +99,9 @@ The code is mainly taken from [https://cornishweb.com/index.php/2019/05/25/using
 - generate SVG server-side during build
 
 ## Changelog
+### 2.1.1
+
+- Fix closing pre tag in fallback output #5 by [@BigBlueHat](https://github.com/BigBlueHat)
 
 ### 2.1.0
 
