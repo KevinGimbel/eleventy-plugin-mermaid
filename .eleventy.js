@@ -4,7 +4,7 @@ module.exports = (eleventyConfig, options) => {
   const highlighter = eleventyConfig.markdownHighlighter;
   const html_tag = options?.html_tag || 'pre';
   const extra_classes = options?.extra_classes ? ' ' + options.extra_classes : '';
-  let mermaid_config = options?.mermaid_config || {startOnLoad:true};
+  let mermaid_config = {...options.mermaid_config || {}, ...{loadOnSave: true}};
   let src = options?.mermaid_js_src || "https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs";
 
   eleventyConfig.addShortcode("mermaid_js", () => {

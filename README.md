@@ -7,7 +7,7 @@
 - [Config](#config)
   - [Config Options](#config-options)
   - [Config Examples](#config-examples)
-- [Examples](#examples)
+    - [Inline configuration](#inline-configuration)
 - [Thanks](#thanks)
 - [Future ideas](#future-ideas)
 - [Changelog](#changelog)
@@ -60,6 +60,7 @@ Global config options, set in `eleventy.js`.
 | `mermaid_js_src` | String | `https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs` | source from where Mermaid will be loaded |
 | `html_tag` | String | `pre` | The wrapping HTML tag which the graph is rendered inside |
 | `extra_classes` | String | `""` | Extra CSS classes assigned to the wrapping element |
+| `mermaid_config` | String | `{startOnLoad: true}` | Define custom settings to be passed to `mermaid.initialize` |
 
 ### Config Examples
 
@@ -71,11 +72,31 @@ module.exports = (eleventyConfig) => {
     // load mermaid from local assets directory
     mermaid_js_src: '/assets/mermaid.min.mjs',
     html_tag: 'div',
-    extra_classes: 'graph'
+    extra_classes: 'graph',
+    mermaid_config: {
+      'startOnLoad': true,
+      'theme': 'dark'
+    }
   });
 };
 ```
 
+#### Inline configuration
+
+It's possible to configure each graqph using mermaid's Inline configuration:
+
+
+```markdown
+    ```mermaid
+      %%{init: {'theme':'forest'}}%%
+      graph TD
+      A[Public web] -->|HTTP request| B(Firewall)
+      B --> C{Is port open}
+      C -->|Yes| D[App]
+      C -->|No| E[Return error]
+    ```
+
+```
 ## Examples
 
 The plugin extends the 11ty markdown highlighter so mermaid diagrams can be written inline via code blocks marked with `mermaid`:
