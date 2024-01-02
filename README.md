@@ -11,6 +11,7 @@
 - [Thanks](#thanks)
 - [Future ideas](#future-ideas)
 - [Changelog](#changelog)
+  - [2.2.1](#221)
   - [2.1.1](#211)
   - [2.1.0](#210)
   - [2.0.0](#200)
@@ -120,6 +121,11 @@ The code is mainly taken from [https://cornishweb.com/index.php/2019/05/25/using
 - generate SVG server-side during build
 
 ## Changelog
+### 2.2.1
+
+- feat: allow setting all configurations via mermaid_config when initializing the plugin
+- fix: use `options?.` instead of `options` in case `options` isn't defined
+
 ### 2.1.1
 
 - Fix closing pre tag in fallback output #5 by [@BigBlueHat](https://github.com/BigBlueHat)
