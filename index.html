@@ -23,8 +23,10 @@ B --> C{Is port open}
 C -->|Yes| D[App]
 C -->|No| E[Return error]
 </pre>
+<h2>Custom theme</h2>
+<pre class="mermaid">%%{init: {&#39;theme&#39;:&#39;forest&#39;}}%%&#10;graph TD&#10;A[Public web] --&gt;|HTTP request| B(Firewall)&#10;B --&gt; C{Is port open}&#10;C --&gt;|Yes| D[App]&#10;C --&gt;|No| E[Return error]&#10;</pre>
 
   <!-- MERMAID -->
-  <script type="module" async>import mermaid from "https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs";document.addEventListener('DOMContentLoaded', mermaid.initialize({startOnLoad:true}));</script>
+  <script type="module" async>import mermaid from "https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs";document.addEventListener('DOMContentLoaded', mermaid.initialize({"loadOnSave":true}));</script>
 </body>
 </html>
