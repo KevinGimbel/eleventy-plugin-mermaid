@@ -28,7 +28,7 @@
     "url": "https://github.com/KevinGimbel/eleventy-plugin-mermaid/issues"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.1"
+    "@11ty/eleventy": "3.0.0-alpha.3"
   },
   "dependencies": {
     "htmlencode": "^0.0.4"

@@ -59,3 +59,14 @@ B --> C{Is port open}
 C -->|Yes| D[App]
 C -->|No| E[Return error]
 ```
+
+## Custom theme
+
+```mermaid
+%%{init: {'theme':'forest'}}%%
+graph TD
+A[Public web] -->|HTTP request| B(Firewall)
+B --> C{Is port open}
+C -->|Yes| D[App]
+C -->|No| E[Return error]
+```
