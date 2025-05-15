@@ -3,7 +3,8 @@
   "version": "3.0.0",
   "description": "Display graphs using the Mermaid JavaScript library",
   "homepage": "",
-  "main": ".eleventy.js",
+  "main": "mermaid-11ty.js",
+  "type": "module",
   "scripts": {
     "dev": "npx @11ty/eleventy --input=dev --output=docs --serve --watch",
     "build": "npx @11ty/eleventy --input=dev --output=docs",
