@@ -1,6 +1,6 @@
 {
   "name": "@kevingimbel/eleventy-plugin-mermaid",
-  "version": "2.2.1",
+  "version": "3.0.0",
   "description": "Display graphs using the Mermaid JavaScript library",
   "homepage": "",
   "main": ".eleventy.js",
