@@ -22,7 +22,7 @@
 
 ## Usage
 
-Install via npm:
+Install via `npm`:
 
 ```bash
 npm install @kevingimbel/eleventy-plugin-mermaid
@@ -69,9 +69,9 @@ Global config options, set in `eleventy.js`.
 ### Config Examples
 
 ```js
-const pluginMermaid = require("@kevingimbel/eleventy-plugin-mermaid");
+import pluginMermaid from "@kevingimbel/eleventy-plugin-mermaid";
 
-module.exports = (eleventyConfig) => {
+export default function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginMermaid, {
     // load mermaid from local assets directory
     mermaid_js_src: '/assets/mermaid.min.mjs',
@@ -87,7 +87,7 @@ module.exports = (eleventyConfig) => {
 
 #### Inline configuration
 
-It's possible to configure each graqph using mermaid's Inline configuration:
+It's possible to configure each graph using mermaid's `Inline configuration`:
 
 
 ```markdown
