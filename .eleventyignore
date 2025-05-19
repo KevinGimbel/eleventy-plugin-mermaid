@@ -1,2 +1,6 @@
 README.md
 .nojekyll
+LICENSE
+.npmignore
+package-lock.json
+package.json
