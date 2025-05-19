@@ -1,9 +1,10 @@
 {
   "name": "@kevingimbel/eleventy-plugin-mermaid",
-  "version": "2.2.1",
+  "version": "3.0.0",
   "description": "Display graphs using the Mermaid JavaScript library",
   "homepage": "",
-  "main": ".eleventy.js",
+  "main": "mermaid-11ty.js",
+  "type": "module",
   "scripts": {
     "dev": "npx @11ty/eleventy --input=dev --output=docs --serve --watch",
     "build": "npx @11ty/eleventy --input=dev --output=docs",
@@ -17,7 +18,10 @@
     "11ty",
     "11ty-plugin",
     "eleventy",
-    "eleventy-plugin"
+    "eleventy-plugin",
+    "mermaid",
+    "mermaid-js",
+    "mermaid-js-plugin"
   ],
   "author": {
     "name": "KevinGimbel",
@@ -28,9 +32,9 @@
     "url": "https://github.com/KevinGimbel/eleventy-plugin-mermaid/issues"
   },
   "devDependencies": {
-    "@11ty/eleventy": "3.0.0-alpha.3"
+    "@11ty/eleventy": "^3.1.0"
   },
   "dependencies": {
-    "htmlencode": "^0.0.4"
+    "he": "^1.2.0"
   }
 }

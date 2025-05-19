@@ -3,23 +3,26 @@
 
 <!-- BEGIN mktoc -->
 
-- [Usage](#usage)
-- [Config](#config)
-  - [Config Options](#config-options)
-  - [Config Examples](#config-examples)
-    - [Inline configuration](#inline-configuration)
-- [Thanks](#thanks)
-- [Future ideas](#future-ideas)
-- [Changelog](#changelog)
-  - [2.2.1](#221)
-  - [2.1.1](#211)
-  - [2.1.0](#210)
-  - [2.0.0](#200)
+- [eleventy-plugin-mermaid](#eleventy-plugin-mermaid)
+  - [Usage](#usage)
+  - [Config](#config)
+    - [Config Options](#config-options)
+    - [Config Examples](#config-examples)
+      - [Inline configuration](#inline-configuration)
+  - [Examples](#examples)
+  - [Thanks](#thanks)
+  - [Future ideas](#future-ideas)
+  - [Changelog](#changelog)
+    - [3.0.0](#300)
+    - [2.2.1](#221)
+    - [2.1.1](#211)
+    - [2.1.0](#210)
+    - [2.0.0](#200)
 <!-- END mktoc -->
 
 ## Usage
 
-Install via npm:
+Install via `npm`:
 
 ```bash
 npm install @kevingimbel/eleventy-plugin-mermaid
@@ -28,9 +31,9 @@ npm install @kevingimbel/eleventy-plugin-mermaid
 Include it in your `.eleventy.js` config file:
 
 ```js
-const pluginMermaid = require("@kevingimbel/eleventy-plugin-mermaid");
+import pluginMermaid from "@kevingimbel/eleventy-plugin-mermaid";
 
-module.exports = (eleventyConfig) => {
+export default function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginMermaid);
 };
 ```
@@ -66,9 +69,9 @@ Global config options, set in `eleventy.js`.
 ### Config Examples
 
 ```js
-const pluginMermaid = require("@kevingimbel/eleventy-plugin-mermaid");
+import pluginMermaid from "@kevingimbel/eleventy-plugin-mermaid";
 
-module.exports = (eleventyConfig) => {
+export default function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginMermaid, {
     // load mermaid from local assets directory
     mermaid_js_src: '/assets/mermaid.min.mjs',
@@ -84,7 +87,7 @@ module.exports = (eleventyConfig) => {
 
 #### Inline configuration
 
-It's possible to configure each graqph using mermaid's Inline configuration:
+It's possible to configure each graph using mermaid's `Inline configuration`:
 
 
 ```markdown
@@ -121,6 +124,12 @@ The code is mainly taken from [https://cornishweb.com/index.php/2019/05/25/using
 - generate SVG server-side during build
 
 ## Changelog
+
+### 3.0.0
+
+- chore: Changed module syntax to ESM
+- chore: Replace older `htmlencode` with newer `he` library
+
 ### 2.2.1
 
 - feat: allow setting all configurations via mermaid_config when initializing the plugin
