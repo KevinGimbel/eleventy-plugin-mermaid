@@ -31,9 +31,9 @@ npm install @kevingimbel/eleventy-plugin-mermaid
 Include it in your `.eleventy.js` config file:
 
 ```js
-const pluginMermaid = require("@kevingimbel/eleventy-plugin-mermaid");
+import pluginMermaid from "@kevingimbel/eleventy-plugin-mermaid";
 
-module.exports = (eleventyConfig) => {
+export default function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginMermaid);
 };
 ```
@@ -128,6 +128,7 @@ The code is mainly taken from [https://cornishweb.com/index.php/2019/05/25/using
 ### 3.0.0
 
 - chore: Changed module syntax to ESM
+- chore: Replace older `htmlencode` with newer `he` library
 
 ### 2.2.1
 
