@@ -1,6 +1,6 @@
 {
   "name": "@kevingimbel/eleventy-plugin-mermaid",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Display graphs using the Mermaid JavaScript library",
   "homepage": "",
   "main": "mermaid-11ty.js",
@@ -32,7 +32,7 @@
     "url": "https://github.com/KevinGimbel/eleventy-plugin-mermaid/issues"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.0"
+    "@11ty/eleventy": "^3.1.2"
   },
   "dependencies": {
     "he": "^1.2.0"

@@ -3,21 +3,20 @@
 
 <!-- BEGIN mktoc -->
 
-- [eleventy-plugin-mermaid](#eleventy-plugin-mermaid)
-  - [Usage](#usage)
-  - [Config](#config)
-    - [Config Options](#config-options)
-    - [Config Examples](#config-examples)
-      - [Inline configuration](#inline-configuration)
-  - [Examples](#examples)
-  - [Thanks](#thanks)
-  - [Future ideas](#future-ideas)
-  - [Changelog](#changelog)
-    - [3.0.0](#300)
-    - [2.2.1](#221)
-    - [2.1.1](#211)
-    - [2.1.0](#210)
-    - [2.0.0](#200)
+- [Usage](#usage)
+- [Config](#config)
+  - [Config Options](#config-options)
+  - [Config Examples](#config-examples)
+    - [Inline configuration](#inline-configuration)
+- [Thanks](#thanks)
+- [Future ideas](#future-ideas)
+- [Changelog](#changelog)
+  - [3.0.1](#301)
+  - [3.0.0](#300)
+  - [2.2.1](#221)
+  - [2.1.1](#211)
+  - [2.1.0](#210)
+  - [2.0.0](#200)
 <!-- END mktoc -->
 
 ## Usage
@@ -124,6 +123,11 @@ The code is mainly taken from [https://cornishweb.com/index.php/2019/05/25/using
 - generate SVG server-side during build
 
 ## Changelog
+
+### 3.0.1
+
+- chore: Update default Mermaid Version to 11.11.0 by [@khill-fbmc](https://github.com/khill-fbmc)
+- chore: bump 11ty to 3.2.1
 
 ### 3.0.0
 
